@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./medical_clinic/static/css/input.css -o ./medical_clinic/static/css/output.css --minify",
+    "watch": "tailwindcss -i ./medical_clinic/static/css/input.css -o ./medical_clinic/static/css/output.css --watch"
+  }
+}

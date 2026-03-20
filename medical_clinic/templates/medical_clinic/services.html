@@ -1,0 +1,104 @@
+{% extends "medical_clinic/base.html" %}
+{% load static %}
+
+{% block title %}Services - DoClinic{% endblock %}
+
+{% block content %}
+<section class="bg-white py-12 sm:py-16 lg:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900">Services</h1>
+            <p class="mt-4 text-base sm:text-lg text-slate-600">Comprehensive care for everyday health needs and complex concerns.</p>
+        </div>
+
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-blue-600 text-white rounded-xl p-3">
+                        <i class="fas fa-stethoscope text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">General Consultation</h3>
+                        <p class="mt-2 text-sm text-slate-600">Diagnosis and treatment for common illnesses, follow-ups, and ongoing care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-emerald-600 text-white rounded-xl p-3">
+                        <i class="fas fa-heartbeat text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Cardiology Care</h3>
+                        <p class="mt-2 text-sm text-slate-600">Evaluation of chest pain, blood pressure, palpitations, and heart health planning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-indigo-600 text-white rounded-xl p-3">
+                        <i class="fas fa-notes-medical text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Preventive Check-ups</h3>
+                        <p class="mt-2 text-sm text-slate-600">Annual physicals, risk screening, and lifestyle guidance to prevent future illness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-amber-600 text-white rounded-xl p-3">
+                        <i class="fas fa-vial text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Lab Review</h3>
+                        <p class="mt-2 text-sm text-slate-600">Clear explanation of reports, next steps, and treatment plans based on results.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-rose-600 text-white rounded-xl p-3">
+                        <i class="fas fa-lungs text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Respiratory Care</h3>
+                        <p class="mt-2 text-sm text-slate-600">Support for asthma, allergies, chronic cough, and breathing-related concerns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 bg-slate-800 text-white rounded-xl p-3">
+                        <i class="fas fa-user-check text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Chronic Disease Management</h3>
+                        <p class="mt-2 text-sm text-slate-600">Long-term support for diabetes, hypertension, cholesterol, and related conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 sm:mt-14 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div class="max-w-2xl">
+                <h2 class="text-2xl font-bold text-slate-900">Need help choosing the right service?</h2>
+                <p class="mt-2 text-slate-600">Call the clinic or message on WhatsApp and we’ll guide you to the right appointment type.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <a href="tel:+1234567890" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl text-center transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i>Call Now
+                </a>
+                <a href="https://wa.me/1234567890" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl text-center transition duration-300">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
