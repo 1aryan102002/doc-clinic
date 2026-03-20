@@ -5,6 +5,7 @@ class Appointment(models.Model):
     full_name = models.CharField(max_length=120)
     phone = models.CharField(max_length=30)
     email = models.EmailField(blank=True)
+    date_of_birth = models.DateField(blank=True, null=True)
     preferred_date = models.DateField()
     preferred_time = models.TimeField(blank=True, null=True)
     reason = models.CharField(max_length=200, blank=True)

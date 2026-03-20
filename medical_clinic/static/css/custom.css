@@ -1,0 +1,44 @@
+.reviews-box {
+  height: clamp(22rem, 60vh, 40rem);
+}
+
+.scroll-box {
+  max-height: clamp(18rem, 60dvh, 34rem);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+@supports not (height: 1dvh) {
+  .scroll-box {
+    max-height: clamp(18rem, 60vh, 34rem);
+  }
+}
+
+.reviews-scroll {
+  height: 100%;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148 163 184) transparent;
+  overscroll-behavior: contain;
+}
+
+.reviews-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.reviews-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reviews-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(148 163 184);
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.reviews-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(100 116 139);
+}
