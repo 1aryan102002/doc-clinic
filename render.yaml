@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: doc-clinic
+    env: python
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py load_initial_data
+    startCommand: gunicorn doc_clinic.wsgi:application
+    envVars:
+      - key: DJANGO_DEBUG
+        value: "0"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ""
+      - key: SQLITE_PATH
+        value: "/var/data/db.sqlite3"
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    disk:
+      name: doc-clinic-data
+      mountPath: /var/data
+      sizeGB: 1
