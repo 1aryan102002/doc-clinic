@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoClinic - Book Appointment</title>
+    <link rel="stylesheet" href="medical_clinic/static/css/output.css">
+    <link rel="stylesheet" href="medical_clinic/static/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <i class="fas fa-hand-holding-medical text-blue-600 text-3xl"></i>
+                        <span class="text-2xl font-bold tracking-tight text-slate-800">DoClinic</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
+                    <a href="/" class="hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="/about-doctor.html" class="hover:text-blue-600 transition duration-300">About Doctor</a>
+                    <a href="/services.html" class="hover:text-blue-600 transition duration-300">Services</a>
+                    <a href="/book-appointment.html" class="hover:text-blue-600 transition duration-300">Book Appointment</a>
+                    <a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a>
+                    <a href="/admin/" class="hover:text-blue-600 transition duration-300">Admin UI</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-600 focus:outline-none rounded-xl p-2 hover:shadow-lg hover:bg-slate-50 transition" aria-controls="mobile-menu" aria-expanded="false" type="button">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+            <div class="container mx-auto px-4 md:px-6 py-4 space-y-4">
+                <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wider text-slate-700">
+                    <a href="/" class="py-2 hover:text-blue-600">Home</a>
+                    <a href="/about-doctor.html" class="py-2 hover:text-blue-600">About Doctor</a>
+                    <a href="/services.html" class="py-2 hover:text-blue-600">Services</a>
+                    <a href="/book-appointment.html" class="py-2 hover:text-blue-600">Book Appointment</a>
+                    <a href="#contact" class="py-2 hover:text-blue-600">Contact</a>
+                    <a href="/admin/" class="py-2 hover:text-blue-600">Admin UI</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="grow">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h1 class="text-4xl font-extrabold text-slate-900">Book Appointment</h1>
+                        <p class="text-slate-600 mt-3">Static showcase page (form UI only). Backend submission requires Django hosting.</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <form>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                                    <input class="w-full rounded-xl border border-slate-200 px-4 py-3" placeholder="John Doe" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Phone</label>
+                                    <input class="w-full rounded-xl border border-slate-200 px-4 py-3" placeholder="+91 98765 43210" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                                    <input type="email" class="w-full rounded-xl border border-slate-200 px-4 py-3" placeholder="name@example.com" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Date of Birth</label>
+                                    <input type="date" class="w-full rounded-xl border border-slate-200 px-4 py-3" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Preferred Date</label>
+                                    <input type="date" class="w-full rounded-xl border border-slate-200 px-4 py-3" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Preferred Time</label>
+                                    <input type="time" class="w-full rounded-xl border border-slate-200 px-4 py-3" />
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Reason</label>
+                                <input class="w-full rounded-xl border border-slate-200 px-4 py-3" placeholder="Short reason" />
+                            </div>
+                            <div class="mt-4">
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                                <textarea class="w-full rounded-xl border border-slate-200 px-4 py-3" rows="4" placeholder="Add notes for the doctor"></textarea>
+                            </div>
+                            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                                <button type="button" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700">Submit (UI)</button>
+                                <a href="/admin/appointments.html" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 font-bold hover:bg-slate-50 text-center">View Admin UI</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-slate-800 text-slate-300 py-10 mt-auto">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <hr class="border-slate-700 mb-6">
+            <p class="text-xs">&copy; 2026 DoClinic. All rights reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="medical_clinic/static/js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoClinic - About Doctor</title>
+    <link rel="stylesheet" href="medical_clinic/static/css/output.css">
+    <link rel="stylesheet" href="medical_clinic/static/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <i class="fas fa-hand-holding-medical text-blue-600 text-3xl"></i>
+                        <span class="text-2xl font-bold tracking-tight text-slate-800">DoClinic</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
+                    <a href="/" class="hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="/about-doctor.html" class="hover:text-blue-600 transition duration-300">About Doctor</a>
+                    <a href="/services.html" class="hover:text-blue-600 transition duration-300">Services</a>
+                    <a href="/book-appointment.html" class="hover:text-blue-600 transition duration-300">Book Appointment</a>
+                    <a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a>
+                    <a href="/admin/" class="hover:text-blue-600 transition duration-300">Admin UI</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-600 focus:outline-none rounded-xl p-2 hover:shadow-lg hover:bg-slate-50 transition" aria-controls="mobile-menu" aria-expanded="false" type="button">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+            <div class="container mx-auto px-4 md:px-6 py-4 space-y-4">
+                <div class="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wider text-slate-700">
+                    <a href="/" class="py-2 hover:text-blue-600">Home</a>
+                    <a href="/about-doctor.html" class="py-2 hover:text-blue-600">About Doctor</a>
+                    <a href="/services.html" class="py-2 hover:text-blue-600">Services</a>
+                    <a href="/book-appointment.html" class="py-2 hover:text-blue-600">Book Appointment</a>
+                    <a href="#contact" class="py-2 hover:text-blue-600">Contact</a>
+                    <a href="/admin/" class="py-2 hover:text-blue-600">Admin UI</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="grow">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <div class="lg:col-span-1">
+                        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+                            <div class="flex items-center gap-4">
+                                <img src="medical_clinic/static/images/doctor.jpg" alt="Dr. Alexander Rivers" class="w-20 h-20 rounded-2xl object-cover">
+                                <div>
+                                    <h1 class="text-2xl font-extrabold text-slate-900">Dr. Alexander Rivers</h1>
+                                    <p class="text-slate-600 font-bold">Cardiology & General Medicine</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 space-y-3 text-sm text-slate-700">
+                                <div class="flex items-center gap-2"><i class="fas fa-award text-amber-500"></i><span>15+ years experience</span></div>
+                                <div class="flex items-center gap-2"><i class="fas fa-users text-blue-600"></i><span>10,000+ patients served</span></div>
+                                <div class="flex items-center gap-2"><i class="fas fa-location-dot text-emerald-600"></i><span>Downtown Clinic</span></div>
+                            </div>
+                            <a href="/book-appointment.html" class="inline-flex items-center justify-center w-full mt-6 px-5 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-10">
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-4 border-b pb-2">A Commitment to Excellence</h2>
+                            <div class="prose max-w-none text-slate-700 leading-relaxed">
+                                <p><strong>Patient-First Care:</strong> Dr. Alexander Rivers combines evidence-based medicine with a calm, conversational approach so patients clearly understand their diagnosis, options, and next steps.</p>
+                                <p>His practice focuses on long-term prevention—building realistic lifestyle plans, monitoring key risk factors, and coordinating follow-ups to keep small issues from becoming bigger ones.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 border-b pb-2">Featured Case Studies</h2>
+                            <div class="space-y-6">
+                                <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 hover:shadow-xl transition">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3">Hypertension Management</h3>
+                                    <div class="flex flex-col md:flex-row gap-6">
+                                        <div class="md:w-1/3">
+                                            <img src="medical_clinic/static/images/doctor.jpg" alt="Case" class="rounded-lg shadow-md w-full h-auto object-contain bg-white max-h-72">
+                                        </div>
+                                        <div class="md:w-2/3 prose-sm max-w-none text-slate-600">
+                                            <p>A structured lifestyle + medication plan helped the patient reach stable BP targets within 8 weeks, with improved sleep and energy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 hover:shadow-xl transition">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3">Chest Pain Triage</h3>
+                                    <div class="prose-sm max-w-none text-slate-600">
+                                        <p>Rapid assessment and follow-up imaging ruled out severe cardiac risk and guided a safe recovery plan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-slate-800 text-slate-300 py-10 mt-auto">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">DoClinic</h3>
+                    <p class="text-sm leading-relaxed">Providing high-quality medical care with compassion and excellence. Your health is our top priority.</p>
+                    <div class="mt-4 text-sm leading-relaxed">
+                        <p class="font-bold text-white">Clinic Address</p>
+                        <p>123 Health Avenue, Downtown<br>Your City, Your State 000000</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white">Home</a></li>
+                        <li><a href="/about-doctor.html" class="hover:text-white">About Doctor</a></li>
+                        <li><a href="/services.html" class="hover:text-white">Services</a></li>
+                        <li><a href="/book-appointment.html" class="hover:text-white">Book Appointment</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4 text-xl">
+                        <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/1234567890" class="hover:text-white transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4 text-sm">
+                        <p class="font-bold text-white">Hours</p>
+                        <p>Mon–Sat: 9:00 AM – 6:00 PM<br>Sun: Emergency only</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-slate-700 mb-6">
+            <p class="text-xs">&copy; 2026 DoClinic. All rights reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="medical_clinic/static/js/nav.js"></script>
+</body>
+
+</html>

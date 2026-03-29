@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Appointments (Showcase)</title>
+    <link rel="stylesheet" href="../medical_clinic/static/css/output.css">
+    <link rel="stylesheet" href="../medical_clinic/static/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+            <a href="/admin/" class="flex items-center gap-2 font-extrabold text-slate-900">
+                <i class="fas fa-calendar-check text-blue-600"></i>
+                Appointments
+            </a>
+            <a href="/admin/" class="px-4 py-2 rounded-xl bg-white border border-slate-200 font-bold hover:bg-slate-50">Back</a>
+        </div>
+    </header>
+
+    <main class="grow">
+        <div class="container mx-auto px-4 md:px-6 py-10">
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl font-extrabold">Appointments (UI Showcase)</h1>
+                        <p class="text-slate-600">Filters, actions, and inline SMS history are demonstrated visually.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700">Resend Confirmation SMS</button>
+                        <button class="px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700">Send Closing SMS</button>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-bold">Status: Pending</span>
+                    <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-bold">Day: Today</span>
+                    <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-bold">Search: Phone/Name</span>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm mt-6 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-extrabold">ID</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Patient</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Phone</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Preferred</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Status</th>
+                                <th class="text-left px-4 py-3 font-extrabold">SMS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-100">
+                                <td class="px-4 py-3 font-bold">#1021</td>
+                                <td class="px-4 py-3">Aarav Patel</td>
+                                <td class="px-4 py-3">+91 98765 43210</td>
+                                <td class="px-4 py-3">2026-03-30 10:00</td>
+                                <td class="px-4 py-3"><span class="px-2 py-1 rounded-lg bg-amber-100 text-amber-700 font-bold">Pending</span></td>
+                                <td class="px-4 py-3"><span class="px-2 py-1 rounded-lg bg-emerald-100 text-emerald-700 font-bold">Confirmation Sent</span></td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="px-4 py-3 font-bold">#1022</td>
+                                <td class="px-4 py-3">Neha Singh</td>
+                                <td class="px-4 py-3">+91 90000 11111</td>
+                                <td class="px-4 py-3">2026-03-30 12:30</td>
+                                <td class="px-4 py-3"><span class="px-2 py-1 rounded-lg bg-blue-100 text-blue-700 font-bold">Completed</span></td>
+                                <td class="px-4 py-3"><span class="px-2 py-1 rounded-lg bg-emerald-100 text-emerald-700 font-bold">Closing Sent</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm mt-6 p-6">
+                <h2 class="text-xl font-extrabold">SMS History (Inline)</h2>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-extrabold">Created</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Kind</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Status</th>
+                                <th class="text-left px-4 py-3 font-extrabold">Provider</th>
+                                <th class="text-left px-4 py-3 font-extrabold">To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-100">
+                                <td class="px-4 py-3">2026-03-29 09:15</td>
+                                <td class="px-4 py-3">Appointment Confirmation</td>
+                                <td class="px-4 py-3"><span class="px-2 py-1 rounded-lg bg-emerald-100 text-emerald-700 font-bold">SENT</span></td>
+                                <td class="px-4 py-3">console</td>
+                                <td class="px-4 py-3">+91 98765 43210</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-8">
+        <div class="container mx-auto px-4 md:px-6 text-sm">
+            <p>This is a static UI mock. Real actions work only on the deployed Django app.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
