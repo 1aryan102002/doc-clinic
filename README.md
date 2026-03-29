@@ -22,6 +22,19 @@ Open:
 - Home: `http://127.0.0.1:8000/`
 - Admin: `http://127.0.0.1:8000/admin/`
 
+## Admin access
+
+The admin panel is only available when the Django backend is running (local dev or a deployed server like Render).
+
+Create an admin user:
+
+```bash
+python manage.py createsuperuser
+```
+
+Then log in at:
+- `http://127.0.0.1:8000/admin/`
+
 ## Demo data
 
 This repo ships demo content as fixtures (not a database file). Load it with:
